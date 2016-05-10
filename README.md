@@ -17,7 +17,7 @@ Other Requirements:
 ## Installation
 
 ~~~~
-$ sudo curl -k https://github.com/shannah/cn1make/raw/master/cn1make > /usr/local/bin/cn1make && sudo chmod 0755 /usr/local/bin/cn1make
+$ sudo curl -k -L https://github.com/shannah/cn1make/raw/master/cn1make > /tmp/cn1make && sudo mv /tmp/cn1make  /usr/local/bin/cn1make && sudo chmod 0755 /usr/local/bin/cn1make
 ~~~~
 
 (Note:  If you don't want to do sudo, basically all you have to do is download the [cn1make](cn1make) shell script, put it in your PATH, and make it executable).
