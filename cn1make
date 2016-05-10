@@ -1,4 +1,4 @@
 #!/bin/sh
-curl https://raw.githubusercontent.com/shannah/cn1make/master/configure.xml > configure.xml
+curl -k https://raw.githubusercontent.com/shannah/cn1make/master/configure.xml > configure.xml
 ant -f configure.xml
 rm configure.xml
