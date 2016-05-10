@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="cn1make" default="configure" basedir=".">
+    <description>Configure's a Codename One project</description>
+    
+    <target name="check-settings">
+        <available file="codenameone_settings.properties" property="settings.present"/>
+    </target>
+    <target name="configure" depends="check-settings" description="Configures the dependencies" if="settings.present">
+        <mkdir dir="lib"/>
+        <get src="https://github.com/shannah/binaries/raw/master/cn1-common/CLDC11.jar" dest="lib/CLDC11.jar" skipexisting="true"/>
+        <get skipexisting="true" src="https://github.com/shannah/binaries/raw/master/cn1-common/CodeNameOneBuildClient.jar" dest="CodeNameOneBuildClient.jar"/>
+        <get skipexisting="true" src="https://github.com/shannah/binaries/raw/master/cn1-common/JavaSE.jar" dest="JavaSE.jar"/>
+        <get skipexisting="true" src="https://github.com/shannah/binaries/raw/master/cn1-common/CodenameOne.jar" dest="lib/CodenameOne.jar"/>
+        <get skipexisting="true" src="https://github.com/shannah/binaries/raw/master/cn1-common/CodenameOne_SRC.zip" dest="lib/CodenameOne_SRC.zip"/>
+    </target>
+</project>
